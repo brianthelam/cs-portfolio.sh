@@ -3,6 +3,7 @@
 }
 
 #navbar li{
+    font-size:200%;
     display:inline-block;
     border: 2px solid black;
     /*margin-left:1%;*/
