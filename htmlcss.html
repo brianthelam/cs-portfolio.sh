@@ -20,6 +20,7 @@
         }
         h2 {
             text-align:center;
+            text-decoration:underline;
         }
         table, thead, th, td {
             border:2px solid black;
@@ -29,22 +30,44 @@
             text-align:center;
             background-color:orange;
             margin-left:350px;
+            position:relative;
+            top:40px;
         }
         #history {
             border:2px solid black;
             background-color:rgb(119, 173, 120);
+            margin-left:5%;
+            margin-right:5%;
         }
         #tags {
             border:2px solid black;
             background-color:rgb(119, 173, 120);
+            margin-left:5%;
+            margin-right:5%;
+            position:relative;
+            top:20px;
         }
         #attributes {
             border:2px solid black;
             background-color:rgb(119, 173, 120);
+            margin-left:5%;
+            margin-right:5%;
+            position:relative;
+            top:60px;
         }
         #css {
             border:2px solid black;
             background-color:rgb(119, 173, 120);
+            margin-left:5%;
+            margin-right:5%;
+            margin-bottom:20px;
+            position:relative;
+            top:80px;
+        }
+        .info {
+            margin-left:25%;
+            margin-right:25%;
+            text-align:justify;
         }
         </style>
         
@@ -60,7 +83,7 @@
         
         <div id="history"><h2>The History of HTML</h2>
         
-        <p>HTML, which stands for HyperText Markup Language, is a markup language used to create webpages. Web browsers read the HTML files 
+        <p class="info">HTML, which stands for HyperText Markup Language, is a markup language used to create webpages. Web browsers read the HTML files 
         and turn them into visible webpages that people can view. The webpage you are viewing right now utilizes HTML! The birth of HTML started 
         with physicist Tim Berners-Lee, its creator. When he created HTML, he was an independent contractor 
         with CERN, the European Organization for Nuclear Research. Berners-Lee wanted to create a system that CERN researchers could use to use 
@@ -71,23 +94,12 @@
         
         <div id="tags"><h2>Tags in HTML</h2>
         
-        <p>As mentioned before, HTMl is a markup language. This means that the language utilizes tags to describe its content. HTML tags are 
+        <p class="info">As mentioned before, HTMl is a markup language. This means that the language utilizes tags to describe its content. HTML tags are 
         words inside angle brackets that dictate how the content is viewed. These HTML tags are usually written in pairs, with the leading tag 
         being called the start tag, and the ending tag being called the end tag. The start and end tags are almost the same, except for the fact 
         that the end tag contains a forward slash in front of the word in the angle brackets. The content, which is whatever the creator wants 
         the viewer to see, is placed inside the start and end tags. There is a large variety of HTML tags that can be used to customize the 
         content of webpages, and some are provided in the following table. </p></div>
-        
-        <div id="attributes"><h2>Attributes in HTML</h2>
-        
-        <p>Attributes in HTML are pieces of additional information that are put inside HTML tags. These attributes change the element's 
-        functionality, and provide a wider range of options for customization. An attribute can be added to an element by adding it to the start 
-        tag, and the attribute's properties can be altered by changing its value. All attributes come in the format of 
-        [name of attribute]="[value of attribute]". An example of an attribute is 'text-align="center"' This attribute would be placed in a tag 
-        that describes a piece of text on the website. The attribute's id, "text-align", describes how the text should be aligned, and the value,
-        "center", centers the text in the webpage. Another example of an attribute is 'alt="[text]"'. This attribute would be placed inside an 
-        &lt;img&gt; tag, and gives a description of the image in words. Screen readers will use this description to "read" and image, which can 
-        be utilized by blind people. The value inside the quotes would be the description of the picture. </p></div>
         
         <table id="tagtable">
             <thead>
@@ -131,9 +143,20 @@
             </tbody>
         </table>
         
+        <div id="attributes"><h2>Attributes in HTML</h2>
+        
+        <p class="info">Attributes in HTML are pieces of additional information that are put inside HTML tags. These attributes change the element's 
+        functionality, and provide a wider range of options for customization. An attribute can be added to an element by adding it to the start 
+        tag, and the attribute's properties can be altered by changing its value. All attributes come in the format of 
+        [name of attribute]="[value of attribute]". An example of an attribute is 'text-align="center"' This attribute would be placed in a tag 
+        that describes a piece of text on the website. The attribute's id, "text-align", describes how the text should be aligned, and the value,
+        "center", centers the text in the webpage. Another example of an attribute is 'alt="[text]"'. This attribute would be placed inside an 
+        &lt;img&gt; tag, and gives a description of the image in words. Screen readers will use this description to "read" and image, which can 
+        be utilized by blind people. The value inside the quotes would be the description of the picture. </p></div>
+        
         <div id="css"><h2>CSS</h2>
         
-        <p>CSS stands for Cascading Style Sheets, and it is a style sheet language used to describe the look of a document written in a markup 
+        <p class="info">CSS stands for Cascading Style Sheets, and it is a style sheet language used to describe the look of a document written in a markup 
         language, such as HTML. CSS is used to design the layout, style, and overall presentation of a webpage. CSS was created because when 
         HTML was created, it was never designed to efficiently format tags. To solve this problem, W3C, the World Wide Web Consortium, released 
         CSS in 1996 to specifically handling the formatting side of webpage creation. CSS rule sets consist of a selector and a declaration block. 
