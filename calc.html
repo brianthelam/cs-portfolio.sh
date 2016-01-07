@@ -8,40 +8,57 @@
 	
 	   #boxes {
 	       text-align:center;
-	       margin-top:10px;
-	   }
-	   #border {
-	   	border:2px solid black;
-	   	margin-bottom:2px;
+	       margin-bottom:200px;
 	   }
 	   #dropdown {
 	       font-size:15px;
 	   }
 	   #input1 {
-	       font-size:20px;
-	       width:150px;
+	       font-size:25px;
+	       width:200px;
 	   }
 	   #input2 {
-	       font-size:20px;
-	       width:150px;
+	       font-size:25px;
+	       width:200px;
 	   }
 	   #title {
 	   	text-align:center;
+	   	font-size:40px;
 	   }
 	   #answer {
 	   	text-align:center;
-	   	font-size:20px;
+	   	font-size:40px;
+	   	margin-bottom:200px;
 	   }
 	   #submitButton {
 	   	margin-top:10px;
-	   	font-size:15px;
+	   	font-size:20px;
+	   }
+	   body {
+	   	background-color:rgb(0,88,168);
+	   }
+	   #calculator1{
+	   	float:left;
+	   	margin-left:50px;
+	   }
+	   #calculator2{
+	   	float:right;
+	   	margin-right:50px;
+	   }
+	   #display {
+	   	border:2px solid black;
 	   }
 	</style>
 	
 </head>
 <body> 
-    <h1 id="title">Calculator</h1>
-    <div id="border">
+    <h1 id="title">Brian's Calculator</h1>
+    
+    	<img id="calculator1" src="https://education.ti.com/en/us/~/media/Images/TI%20Education/Global/Products/Scientific/product-30xiis-feature-image.png" alt="TI-30 Calculator">
+
+    	<img id="calculator2" src="https://education.ti.com/en/us/~/media/Images/TI%20Education/Global/Products/Scientific/product-30xiis-feature-image.png" alt="TI-30 Calculator">
+
+    
 <div id=boxes><input type ="text" name="input1" id="input1">
     <select id="dropdown">
         <option value="+">+</option>
@@ -54,10 +71,11 @@
     </select>
     <input type ="text" name="input2" id="input2">
     <br>
-    <input type="button" value="Calculate" id="submitButton" /></div>
-</div>
-    <p id="answer">The answer is: <span id="display"></span></p>
-<script src="calc.js" ></script>
+    <input type="button" value="Calculate" id="submitButton" />
+    </div>
 
+    <p id="answer">Your answer is: <span id="display"></span></p>
+<script src="calc.js" ></script>
+	
 </body>
 </html>
