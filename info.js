@@ -20,3 +20,17 @@ item2.addEventListener("click", function(){
     info3.innerHTML = "Item 2 stuff";
     info4.innerHTML = "Item 2 other stuff";
 });
+
+item3.addEventListener("click", function(){
+    info1.innerHTML = "1";
+    info2.innerHTML = "2";
+    info3.innerHTML = "3";
+    info4.innerHTML = "4";
+});
+
+item4.addEventListener("click", function(){
+    info1.innerHTML = "4";
+    info2.innerHTML = "3";
+    info3.innerHTML = "2";
+    info4.innerHTML = "1";
+});
