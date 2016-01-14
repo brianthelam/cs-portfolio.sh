@@ -11,12 +11,14 @@ riceCrop.addEventListener("click", function(){
 });
 
 farmerButton.addEventListener("click", function(){
-   if (grainCount >= 10) {
+   if (grainCount >= 50) {
       farmerCount++;
       farmers.innerHTML = farmerCount;
-      grainCount -= 10;
+      grainCount -= 50;
       grains.innerHTML = grainCount;
-      setInterval(function(){grainCount + farmerCount} 1000)
+      setInterval(function(){
+         grainCount++;
+         grains.innerHTML = grainCount;
+      }, 2000);
    } 
 });
-

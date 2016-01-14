@@ -2,22 +2,40 @@
 <html>
     <head>
         <style>
+        
+            body {
+                background-color:rgb(210,210,210);
+            }
+        
             #riceCrop {
                 width:350px;
+                border:2px solid black;
+                position:relative;
+                top:100px;
+                left:100px;
+            }
+            
+            #grainCount {
+                font-size:20px;
+                position:relative;
+                top:100px;
+                left:17px;
             }
             
             #farmerCount {
+                font-size:30px;
                 float:right;
                 position:absolute;
-                bottom:550px;
-                right:100px;
+                bottom:500px;
+                right: 110px;
             }
             
             #farmerButton {
+                font-size:20px;
                 float:right;
                 position:absolute;
-                bottom:540px;
-                right:115px;
+                bottom:490px;
+                right:165px;
             }
             
         </style>
@@ -29,7 +47,7 @@
         <p id="grainCount">Your Grains of Rice: <span id="grains"></span></p>
         
         <p id="farmerCount">Peasant Farmers: <span id="farmers"></span></p>
-        <input type="button" value="Buy for 10" id="farmerButton">
+        <input type="button" value="Buy for 50" id="farmerButton">
         
         <script src="clicker.js"></script>
     </body>
