@@ -8,18 +8,18 @@
             }
         
             #riceCrop {
-                width:350px;
+                width:450px;
                 border:2px solid black;
                 position:relative;
-                top:100px;
-                left:100px;
+                top:30px;
+                left:225px;
             }
             
             #grainCount {
-                font-size:20px;
+                font-size:25px;
                 position:relative;
-                top:100px;
-                left:17px;
+                top:40px;
+                left:325px;
             }
             
             #farmerCount {
@@ -27,7 +27,7 @@
                 float:right;
                 position:absolute;
                 bottom:500px;
-                right: 110px;
+                right:110px;
             }
             
             #farmerButton {
@@ -38,16 +38,56 @@
                 right:165px;
             }
             
+            #fertCount {
+                font-size:30px;
+                float:right;
+                position:absolute;
+                bottom:360px;
+                right:165px;
+            }
+            
+            #fertButton {
+                font-size:20px;
+                float:right;
+                position:absolute;
+                bottom:350px;
+                right:160px;
+            }
+            
+            #verticalLine {
+                color:black;
+                width:3px;
+                height:1000px;
+                position:relative;
+                bottom:450px;
+                left:240px;
+            }
+            
+            h1 {
+                position:relative;
+                left:210px;
+            }
+            
         </style>
         <title>Rice Clicker</title>
     </head>
     <body>
         
+        <h1>MLG Rice Harvest Simulator 2016</h1>
+        
         <img id="riceCrop" alt="Rice Crop" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_(IRRI).jpg">
+        
         <p id="grainCount">Your Grains of Rice: <span id="grains"></span></p>
         
+        <hr id="verticalLine" color="black">
+        
         <p id="farmerCount">Peasant Farmers: <span id="farmers"></span></p>
+        
         <input type="button" value="Buy for 50" id="farmerButton">
+        
+        <p id="fertCount">Fertilizer: <span id="fertilizers"></span></p>
+        
+        <input type="button" value="Buy for 5000" id="fertButton">
         
         <script src="clicker.js"></script>
     </body>

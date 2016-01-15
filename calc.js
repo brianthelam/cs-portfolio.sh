@@ -7,8 +7,10 @@ var answer;
 var display = document.getElementById('display');
 var dropdown = document.getElementById("dropdown");
 
+//This event listener states that when the button is clicked, it will run the function below, called doMath.
 button.addEventListener("click", doMath);
 
+//
 function doMath() {
     if  (dropdown.value == "+"){
         answer = parseInt(input1.value) + parseInt(input2.value);
