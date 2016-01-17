@@ -7,9 +7,12 @@ var farmerCount = 0;
 var fertButton = document.getElementById("fertButton");
 var fertilizers = document.getElementById("fertilizers");
 var fertCount = 0;
+var gmButton = document.getElementById("gmButton");
+var gm = document.getElementById("gm");
+var gmCount = 0;
 
 riceCrop.addEventListener("click", function(){
-   grainCount++;
+   grainCount++; 
    grains.innerHTML = grainCount;
 });
 
@@ -38,3 +41,6 @@ fertButton.addEventListener("click", function(){
       }, 1000);
    }
 });
+
+gmButton.addEventListener
+

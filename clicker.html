@@ -4,68 +4,76 @@
         <style>
         
             body {
-                background-color:rgb(210,210,210);
+                background-color:rgb(47,138,67);
             }
         
             #riceCrop {
-                width:450px;
-                border:2px solid black;
-                position:relative;
-                top:30px;
-                left:225px;
+                width:34%;
+                border:3px solid black;
+                position:absolute;
+                left:18%;
+                top:17%;
             }
             
             #grainCount {
                 font-size:25px;
-                position:relative;
-                top:40px;
-                left:325px;
+                position:absolute;
+                top:70%;
+                left:27%;
             }
             
             #farmerCount {
                 font-size:30px;
                 float:right;
                 position:absolute;
-                bottom:500px;
-                right:110px;
+                bottom:78%;
+                right:9.5%;
             }
             
             #farmerButton {
                 font-size:20px;
                 float:right;
                 position:absolute;
-                bottom:490px;
-                right:165px;
+                bottom:77%;
+                right:12.5%;
             }
             
             #fertCount {
                 font-size:30px;
                 float:right;
                 position:absolute;
-                bottom:360px;
-                right:165px;
+                bottom:60%;
+                right:13%;
             }
             
             #fertButton {
                 font-size:20px;
                 float:right;
                 position:absolute;
-                bottom:350px;
-                right:160px;
+                bottom:59%;
+                right:12%;
             }
             
             #verticalLine {
                 color:black;
                 width:3px;
-                height:1000px;
+                height:650px;
                 position:relative;
-                bottom:450px;
+                bottom:510px;
                 left:240px;
             }
             
             h1 {
                 position:relative;
-                left:210px;
+                left:200px;
+            }
+            
+            #instructions {
+                font-style:italic;
+                font-size:15px;
+                position:absolute;
+                left:28%;
+                top:70px;
             }
             
         </style>
@@ -75,6 +83,8 @@
         
         <h1>MLG Rice Harvest Simulator 2016</h1>
         
+        <p id="instructions">Click the rice crop to get started!</p>
+        
         <img id="riceCrop" alt="Rice Crop" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_(IRRI).jpg">
         
         <p id="grainCount">Your Grains of Rice: <span id="grains"></span></p>
@@ -83,11 +93,15 @@
         
         <p id="farmerCount">Peasant Farmers: <span id="farmers"></span></p>
         
-        <input type="button" value="Buy for 50" id="farmerButton">
+        <input type="button" value="Buy 1 for 50" id="farmerButton">
         
         <p id="fertCount">Fertilizer: <span id="fertilizers"></span></p>
         
-        <input type="button" value="Buy for 5000" id="fertButton">
+        <input type="button" value="Buy 1 for 1000" id="fertButton">
+        
+        <p id="gmCount">GM Rice: <span id="gm"></span></p>
+        
+        <input type="button" value="Buy 1 for 10" id="gmButton">
         
         <script src="clicker.js"></script>
     </body>
