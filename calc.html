@@ -9,55 +9,88 @@
 	   #boxes {
 	       text-align:center;
 	       margin-bottom:200px;
+	       position:absolute;
+	       left:450px;
+	       bottom:220px;
 	   }
+	   
 	   #dropdown {
 	       font-size:15px;
 	   }
+	   
 	   #input1 {
 	       font-size:25px;
 	       width:200px;
 	   }
+	   
 	   #input2 {
 	       font-size:25px;
 	       width:200px;
 	   }
+	   
 	   #title {
 	   	text-align:center;
 	   	font-size:40px;
 	   }
+	   
 	   #answer {
 	   	text-align:center;
 	   	font-size:40px;
-	   	margin-bottom:200px;
+	   	position:absolute;
+	    left:520px;
+	    bottom:200px;
 	   }
+	   
 	   #submitButton {
 	   	margin-top:10px;
 	   	font-size:20px;
 	   }
+	   
 	   body {
 	   	background-color:rgb(0,88,168);
 	   }
-	   #calculator1{
-	   	float:left;
-	   	margin-left:50px;
-	   }
-	   #calculator2{
+	   
+	   #calculator{
 	   	float:right;
-	   	margin-right:50px;
+	   	margin-left:50px;
+	   	position:absolute;
 	   }
+	   
 	   #display {
 	   	border:2px solid black;
 	   }
+	   
+	   #navbar {
+	   	float:right;
+	   	margin-right:10px;
+	   	margin-left:10px;
+	   	position:relative;
+		top:110px;
+        right:40px;
+        font-size:150%;
+        border:6px ridge rgb(142, 142, 127);
+        background-color:rgb(200,200,200);
+	   }
+	   
+	   a {
+	   	color:black;
+	   }
+	   
 	</style>
 	
 </head>
 <body> 
     <h1 id="title">Brian's Calculator</h1>
     
-    	<img id="calculator1" src="https://education.ti.com/en/us/~/media/Images/TI%20Education/Global/Products/Scientific/product-30xiis-feature-image.png" alt="TI-30 Calculator">
-
-    	<img id="calculator2" src="https://education.ti.com/en/us/~/media/Images/TI%20Education/Global/Products/Scientific/product-30xiis-feature-image.png" alt="TI-30 Calculator">
-
+    	<img id="calculator" src="https://education.ti.com/en/us/~/media/Images/TI%20Education/Global/Products/Scientific/product-30xiis-feature-image.png" alt="TI-30 Calculator">
+    
+    <ul id="navbar">
+            <li> <a href="index.html">Home </a></li>
+            <li> <a href="htmlcss.html">HTML/CSS </a></li>
+            <li> <a href="calc.html">Calculator </a></li>
+            <li> <a href="info.html">Info Site </a></li>
+            <li> <a href="clicker.html">Clicker Game </a></li>
+        </ul>
     
 <div id=boxes><input type ="text" name="input1" id="input1">
     <select id="dropdown">
