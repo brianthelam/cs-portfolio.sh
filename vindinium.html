@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        
+        <link href="navbar.css" type="text/css" />
+        
+        <title>Vindinium</title>
+        
+        <style>
+            
+            #navbar {
+                text-align:center;
+            }
+            
+            li {
+                font-size:200%;
+                display:inline-block;
+                border:7px ridge rgb(150,150,150);
+            }
+            
+            body {
+                background-color:rgb(77,161,169);
+            }
+            
+            h1 {
+                text-align:center;
+            }
+            
+            h2 {
+                font-weight:normal;
+                text-align:center;
+                text-decoration:underline;
+                margin-top:3%;
+            }
+            
+            p {
+                font-size:110%;
+                margin-left:15%;
+                margin-right:15%;
+                text-align:justify;
+            }
+            
+            
+            
+        </style>
+        
+    </head>
+    <body>
+        
+        <ul id="navbar">
+            <li> <a href="index.html">Home </a></li>
+            <li> <a href="htmlcss.html">HTML/CSS </a></li>
+            <li> <a href="calc.html">Calculator </a></li>
+            <li> <a href="info.html">Info Site </a></li>
+            <li> <a href="clicker.html">Clicker Game </a></li>
+            <li> <a href="vindinium.html">Vindinium</a></li>
+        </ul>
+        
+        <h1>What is Vindinium?</h1>
+        
+        <p>Vindinium is an Artificial Intelligence programming challenge, where you create a program in order to control your bot and fight 
+        against bots created by other players. The premise of the game is for your bot to collect mines scattered around the map, which generate 
+        gold for you when they are in your possession. The winner of the game is the bot with the most gold after a certain amount of turns.
+        However, there is more to the game than just this. Your bot can attack another bot if close enough, and if your bot kills that enemy bot,
+        you will steal all the mines that it owned. There are also taverns where you can spend the gold you earned in order to heal up. The key 
+        tomaking a good AI for Vindinium is a combination of algorithms that incorporate healing, attacking, and claiming mines.</p>
+        
+        <h1>My Vindinium Code</h1>
+        
+        <h2>Richest Bot</h2>
+        
+        <p><code><pre>
+        var tycoonBot = enemyBots[0];
+        for (i = 0; i < enemyBots.length; i++) {
+            if (bot.yourBot.mineCount < enemyBots[i].mineCount) {
+                tycoonBot = enemyBots[i];
+            }
+        }
+        </pre></code></p>
+        
+        <p>This block of code determines which enemy bot has more mines than my bot. In my first line of code, I named my variable tycoonBot, and 
+        made it refer to the enemy bots. In the second line, the for loop cycles through the three enemy bots by increasing i by 1. The third 
+        line is an if statement that compares my bot's mine count with the mine counts of the enemy bots that were cycled through. The enemy bot 
+        with the most mines compared to me is then made to be tycoonBot.</p>
+        
+        <h2>The Decision Tree</h2>
+        
+        <p><code><pre>
+        if(bot.yourBot.life <= 30 || bot.yourBot.mineCount > 4 && bot.yourBot.life <= 99 && bot.yourBot.gold > 300) {
+            task = "getDranks";
+        }
+        
+        else if(bot.yourBot.life >= 50 && bot.freeMines < 1) {
+            task = "attack";
+        }
+        
+        else {
+            task = "freemines";
+        }
+        </pre></code></p>
+        
+        <p>This if/else list determines the conditions that have to be met in order for certain tasks to be executed. The list works by first 
+        checking if the conditions in the first if statement are true. If so, the task I assigned to it will run. If not, the program will check 
+        if the second decision, the else if statement, has its conditions met. If so, the task will run, and if not, the next decision is checked,
+        and so on. The first if statement gives the conditions for the "getDranks" task, which is the task for going to the nearest tavern and 
+        healing. The conditions are either my bot's health is at or below 30, OR my bot has more than 4 mines, my bot is below max health, AND my
+        bot has more than 300 gold. The second part of the tree gives the conditions for my bot to seek out other bots and attack them. My bot 
+        must be at or above 50 health, and there must not be any free mines left in order for it to run the "attack" task. The last part of the 
+        decision tree is the else statement, which means that if none of the above mentioned conditions are met, the task to collect unowned 
+        mines will be run.</p>
+        
+        <h2>Healing</h2>
+        
+        <p><code><pre>
+        if(task === "getDranks") {
+            var closestTavern = bot.taverns[0];
+            for(i = 0; i < bot.taverns.length; i++) {
+                if(bot.findDistance(myPos, closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                    closestTavern = bot.taverns[i];
+                }
+            }
+            console.log("This doesn't taste like cream soda...");
+            myDir = bot.findPath(myPos, closestTavern);
+        }
+        </pre></code></p>
+        
+        <p>This block of code makes it so that when the "getDranks" task is activated, my bot will find the closest tavern. I named the variable 
+        "closestTavern", and made it refer to an array of all the taverns on the map. Then, the for loop cycles through all the tavern locations, 
+        compares each tavern's distance to my bot's location. The closest tavern is then made to be the variable closestTavern. The next part of 
+        this code is a console.log that displays a message when the bot goes for a drink. Finally, the direction my bot goes is determined, 
+        which is from the bot's current position to the position of the closest tavern.</p>
+        
+        <h2>Claiming Mines</h2>
+        
+        <p><code><pre>
+        if(task === "freemines") {
+            var closestMine = bot.freeMines[0];
+            for(i = 0; i < bot.freeMines.length; i++) {
+                if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+                    closestMine = bot.freeMines[i];
+                }
+            }
+            console.log("Claiming real estate!");
+            myDir = bot.findPath(myPos, closestMine);
+        }
+        </pre></code></p>
+        
+        <p>This block of code is very similar to the previous one, and makes it so that when the "freemines" task is run, the bot will find the
+        nearest unowned mine. I named the variable "closestMine", and made it refer to an array of all the unowned mines on the map. A for loop
+        cycles through all the unowned mines, and compares the distances of all the free mines from my position. The mine closest to my bot's 
+        position is defined as the closestMine variable. The code then has a console.log that displays a message stating that my bot is claiming
+        a mine. Finally, the direction my bot is going is set to the closest mine.</p>
+        
+        <h2>Attacking</h2>
+        
+        <p><code><pre>
+        if(task === "attack") {
+            console.log("Slaying nearest peasant!");
+            myDir = bot.findPath(myPos, [tycoonBot.pos.x, tycoonBot.pos.y]);
+        }
+        </pre></code></p>
+        
+        <p>This final code block of mine determines where my bot will go when the "attack" task is run. Since the bots already come with the 
+        ability to attack other bots when they are 1 space away, there is no need for me to program how to attack. All I need to do is 
+        determine where to go, which should be the bot with the most mines, which was already defined in the Richest Bot section. This code 
+        displays a message stating that my bot is attacking, and sets the direction it is going with the coordinates of tycoonBot.</p>
+        
+        <h1>What I Learned</h1>
+        
+        <p>roughout this project, I learned a lot about Javascript programming and AI, all while having a lot of fun. I expanded my knowledge on 
+        Javascript terminology and commands, and how to utilize them. I also learned about the hard work needed in order to properly program 
+        Artificial Intelligence. The AI must have very specific and holistic commands in order to function how I want it to, which requires a 
+        lot of combing through coding. Overall, this project was very enjoyable, and I gained a new perspective on programming.</p>
+        
+    </body>
+</html>
