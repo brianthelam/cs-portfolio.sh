@@ -18,24 +18,25 @@
             
             #grainCount {
                 font-size:153%;
+                color:white;
                 position:absolute;
                 top:70%;
-                left:27%;
+                left:26%;
             }
             
             #farmerCount {
                 font-size:190%;
                 float:right;
                 position:absolute;
-                bottom:78%;
-                right:7%;
+                bottom:83%;
+                right:-18.5%;
             }
             
             #farmerButton {
                 font-size:125%;
                 float:right;
                 position:absolute;
-                bottom:77%;
+                bottom:82%;
                 right:10.5%;
             }
             
@@ -43,16 +44,64 @@
                 font-size:190%;
                 float:right;
                 position:absolute;
-                bottom:60%;
-                right:10.7%;
+                bottom:65%;
+                right:3%;
             }
             
             #fertButton {
                 font-size:125%;
                 float:right;
                 position:absolute;
-                bottom:59%;
+                bottom:64%;
                 right:9.7%;
+            }
+            
+            #plowCount {
+                font-size:190%;
+                float:right;
+                position:absolute;
+                bottom:47%;
+                right:2.7%;
+            }
+            
+            #plowButton {
+                font-size:125%;
+                float:right;
+                position:absolute;
+                bottom:46%;
+                right:9.3%;
+            }
+            
+            #oxenCount {
+                font-size:190%;
+                float:right;
+                position:absolute;
+                bottom:29%;
+                right:-22.3%;
+            }
+            
+            #oxenButton {
+                font-size:125%;
+                float:right;
+                position:absolute;
+                bottom:28%;
+                right:9%;
+            }
+            
+            #maoCount {
+                font-size:190%;
+                float:right;
+                position:absolute;
+                bottom:3%;
+                right:-20%;
+            }
+            
+            #maoButton {
+                font-size:125%;
+                float:right;
+                position:absolute;
+                bottom:2%;
+                right:7.6%;
             }
             
             #verticalLine {
@@ -77,6 +126,30 @@
                 top:11%;
             }
             
+            #farmer-pic {
+                width:5.5%;
+            }
+            
+            #poop-pic {
+                width:18%;
+            }
+            
+            #plow-pic {
+                width:20%;
+            }
+            
+            #ox-pic {
+                width:13%;
+            }
+            
+            #mao-pic {
+                width:8%;
+            }
+            
+            #ricebowl-pic {
+                width:70%;
+            }
+            
         </style>
         <title>Rice Clicker</title>
     </head>
@@ -88,17 +161,31 @@
         
         <img id="riceCrop" alt="Rice Crop" src="https://upload.wikimedia.org/wikipedia/commons/1/19/Rice_Plants_(IRRI).jpg">
         
+        <img id="ricebowl-pic" src="http://vignette3.wikia.nocookie.net/starwarfare/images/d/da/Rice.png/revision/latest?cb=20140818082800">
+        
         <p id="grainCount">Your Grains of Rice: <span id="grains"></span></p>
         
         <hr id="verticalLine" color="black">
         
-        <p id="farmerCount">Peasant Farmers: <span id="farmers"></span></p>
+        <p id="farmerCount"> <img id="farmer-pic" src="http://ih0.redbubble.net/image.6787746.4412/flat,550x550,075,f.jpg"> Peasant Farmers: <span id="farmers"></span></p>
         
         <input type="button" value="Buy 1 for 50" id="farmerButton">
         
-        <p id="fertCount">Fertilizer: <span id="fertilizers"></span></p>
+        <p id="fertCount"> <img id="poop-pic" src="http://emojipedia-us.s3.amazonaws.com/cache/8c/65/8c65e5de808ec301754508366480250c.png"> Fertilizer: <span id="fertilizers"></span></p>
         
-        <input type="button" value="Buy 1 for 1000" id="fertButton">
+        <input type="button" value="Buy 1 for 1,000" id="fertButton">
+        
+        <p id="plowCount"> <img id="plow-pic" src="http://vignette4.wikia.nocookie.net/vikingclan/images/a/ac/Plow.png/revision/latest?cb=20131101044221"> Plows: <span id="plows"></span></p>
+        
+        <input type="button" value="Buy 1 for 30,000" id="plowButton">
+        
+        <p id="oxenCount"> <img id="ox-pic" src="http://atlantadogspa.com/wp-content/uploads/2012/11/wpid-ox.png"> Oxen: <span id="oxen"></span></p>
+        
+        <input type="button" value="Buy 1 for 500,000" id="oxenButton">
+        
+        <p id="maoCount"> <img id="mao-pic" src="http://blogs.smithsonianmag.com/history/files/2012/09/469px-Mao-391x500.jpg"> Chairman Mao <br> Blessings: <span id="mao"></span></p>
+        
+        <input type="button" value="Buy 1 for 1,000,000,000" id="maoButton">
         
         <script src="clicker.js"></script>
     </body>

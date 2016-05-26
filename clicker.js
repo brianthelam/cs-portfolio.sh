@@ -16,6 +16,21 @@ var fertButton = document.getElementById("fertButton");
 var fertilizers = document.getElementById("fertilizers");
 var fertCount = 0;
 
+//Plow upgrade variables
+var plowButton = document.getElementById("plowButton");
+var plows = document.getElementById("plows");
+var plowCount = 0;
+
+//Oxen upgrade variables
+var oxenButton = document.getElementById("oxenButton");
+var oxen = document.getElementById("oxen");
+var oxenCount = 0;
+
+//Mao upgrade variables
+var maoButton = document.getElementById("maoButton");
+var mao = document.getElementById("mao");
+var maoCount = 0;
+
 //This event listener detects if the riceCrop image is clicked, and adds 1 to the span named grainCount every time it is clicked.
 
 riceCrop.addEventListener("click", function(){
@@ -35,7 +50,7 @@ farmerButton.addEventListener("click", function(){
       setInterval(function(){
          grainCount++;
          grains.innerHTML = grainCount;
-      }, 2000);
+      }, 3000);
    } 
 });
 
@@ -48,7 +63,46 @@ fertButton.addEventListener("click", function(){
       grainCount -= 1000;
       grains.innerHTML = grainCount;
       setInterval(function(){
-         grainCount += 10;
+         grainCount += 4;
+         grains.innerHTML = grainCount;
+      }, 1000);
+   }
+});
+
+plowButton.addEventListener("click", function(){
+   if (grainCount >= 30000) {
+      plowCount++;
+      plows.innerHTML = plowCount;
+      grainCount -= 30000;
+      grains.innerHTML = grainCount;
+      setInterval(function(){
+         grainCount += 50;
+         grains.innerHTML = grainCount;
+      }, 1000);
+   }
+});
+
+oxenButton.addEventListener("click", function(){
+   if (grainCount >= 500000) {
+      oxenCount++;
+      oxen.innerHTML = oxenCount;
+      grainCount -= 500000;
+      grains.innerHTML = grainCount;
+      setInterval(function(){
+         grainCount += 900;
+         grains.innerHTML = grainCount;
+      }, 1000);
+   }
+});
+
+maoButton.addEventListener("click", function(){
+   if (grainCount >= 1000000000) {
+      maoCount++;
+      mao.innerHTML = maoCount;
+      grainCount -= 1000000000;
+      grains.innerHTML = grainCount;
+      setInterval(function(){
+         grainCount += 5432125;
          grains.innerHTML = grainCount;
       }, 1000);
    }
