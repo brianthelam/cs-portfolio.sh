@@ -9,62 +9,78 @@
                 text-align:center;
             }
             
-            #ballista {
+            #ballistaButton {
                 position:absolute;
                 left:11.9%;
                 top:37.2%;
             }
             
-            #laserSight {
+            #laserSightButton {
                 position:absolute;
                 left:11.9%;
                 top:44%;
             }
             
-            #extendedClip {
+            #extendedClipButton {
                 position:absolute;
                 left:11.9%;
                 top:47.4%;
             }
             
-            #b23r {
+            #pistolButton {
                 position:absolute;
                 left:11.9%;
                 top:55.1%;
             }
             
-            #lightweight {
+            #lightweightButton {
                 position:absolute;
                 left:39.5%;
                 top:26%;
             }
             
-            #toughness {
+            #toughnessButton {
                 position:absolute;
                 left:39.5%;
                 top:34.8%;
             }
             
-            #fastHands {
+            #fastHandsButton {
                 position:absolute;
                 left:39.5%;
                 top:38.2%;
             }
             
-            #dexterity {
+            #dexterityButton {
                 position:absolute;
                 left:39.5%;
                 top:44%;
             }
             
-            #tacInsert {
+            #tacInsertButton {
                 position:absolute;
                 left:39.3%;
                 top:62%;
             }
             
             #classPic {
-                width:70%;
+                position:absolute;
+                width:69.4%;
+                z-index:-1;
+            }
+            
+            #info-box {
+                position:absolute;
+                top:6%;
+                left:71%;
+                margin-right:10px;
+                font-size:22px;
+            }
+            
+            #navbar {
+                position:absolute;
+                font-size:18px;
+                right:90%;
             }
             
         </style>
@@ -74,16 +90,35 @@
         
         <h1>BO2 Quickscoping Class</h1>
         
+        <ul id="navbar">
+            <li> <a href="index.html">Home </a></li>
+            <li> <a href="htmlcss.html">HTML/CSS </a></li>
+            <li> <a href="calc.html">Calculator </a></li>
+            <li> <a href="info.html">Info Site </a></li>
+            <li> <a href="clicker.html">Clicker Game </a></li>
+            <li> <a href="vindinium.html">Vindinium Info </a></li>
+            <li> <a href="model.html">Quickscope Model </a></li>
+        </ul>
+        
         <img id="classPic" src="https://i.ytimg.com/vi/cB1ZugsvxCw/maxresdefault.jpg">
         
-        <input id="ballista" type="button" value="Ballista">
-        <input id="laserSight" type="button" value="Laser Sight">
-        <input id="extendedClip" type="button" value="Extended Clip">
-        <input id="b23r" type="button" value="B23R">
-        <input id="lightweight" type="button" value="Lightweight">
-        <input id="toughness" type="button" value="Toughness">
-        <input id="fastHands" type="button" value="Fast Hands">
-        <input id="dexterity" type="button" value="Dexterity">
-        <input id="tacInsert" type="button" value="Tactical Insertion">
+        <p id="info-box">
+            
+        </p>
+        
+        <input id="ballistaButton" type="button" value="Ballista" onclick="myBallista()">
+        <input id="laserSightButton" type="button" value="Laser Sight">
+        <input id="extendedClipButton" type="button" value="Extended Clip">
+        <input id="pistolButton" type="button" value="B23R">
+        <input id="lightweightButton" type="button" value="Lightweight">
+        <input id="toughnessButton" type="button" value="Toughness">
+        <input id="fastHandsButton" type="button" value="Fast Hands">
+        <input id="dexterityButton" type="button" value="Dexterity">
+        <input id="tacInsertButton" type="button" value="Tactical Insertion">
+        
+        
+        
+        <script src="model.js"></script>
+        
     </body>
 </html>
